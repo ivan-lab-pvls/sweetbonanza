@@ -61,11 +61,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CustomButton(
                         imageButton: 'assets/images/elements/privacy.png',
                         onTap: () {
-                          MaterialPageRoute<void>(
+                          Navigator.of(context).push(MaterialPageRoute<void>(
                               builder: (BuildContext context) => const TRMS(
                                     trms:
                                         'https://docs.google.com/document/d/1KoQaOHv6_j3XQNZMJlWBa3AkbqN-A80r4PjCIf9D9vs/edit?usp=sharing',
-                                  ));
+                                  )));
                         },
                       ),
                       SizedBox(height: 20),
