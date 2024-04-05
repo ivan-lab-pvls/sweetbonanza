@@ -16,42 +16,48 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/elements/bg.png"),
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/elements/bg.png"),
+            fit: BoxFit.cover,
           ),
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-    child: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('assets/images/elements/logo.png'),
-          Column(
+        ),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomButton(imageButton: 'assets/images/elements/game.png', onTap: () {
-                context.router.push(GameSelectionRoute());
-              },),
-              SizedBox(height: 20),
-              CustomButton(imageButton: 'assets/images/elements/levels.png', onTap: () {
-                context.router.push(GameSelectionRoute());
-              },),
-              SizedBox(height: 20),
-              CustomButton(imageButton: 'assets/images/elements/game-section.png', onTap: () {
-                context.router.push(GameSelectionRoute());
-              },),
-              SizedBox(height: 20),
-              CustomButton(imageButton: 'assets/images/elements/settings.png', onTap: () {
-                context.router.push(SettingsRoute());
-              },),
+              Image.asset('assets/images/elements/logo.png'),
+              Column(
+                children: [
+                  CustomButton(
+                    imageButton: 'assets/images/elements/levels.png',
+                    onTap: () {
+                      context.router.push(GameSelectionRoute());
+                    },
+                  ),
+                  SizedBox(height: 20),
+                  CustomButton(
+                    imageButton: 'assets/images/elements/game-section.png',
+                    onTap: () {
+                      context.router.push(GameSelectionRoute());
+                    },
+                  ),
+                  SizedBox(height: 20),
+                  CustomButton(
+                    imageButton: 'assets/images/elements/settings.png',
+                    onTap: () {
+                      context.router.push(SettingsRoute());
+                    },
+                  ),
+                ],
+              )
             ],
-          )
-        ],
+          ),
+        ),
       ),
-    ),
-    ),);
+    );
   }
 }
